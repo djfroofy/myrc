@@ -287,7 +287,8 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
+myStartupHook = do
+    spawn "xmodmap ~/.Xmodmap"
 
 ------------------------------------------------------------------------
 -- Floats all windows in a certain workspace. 
