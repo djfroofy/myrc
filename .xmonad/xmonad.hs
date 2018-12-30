@@ -28,7 +28,7 @@ myTerminal = "/run/current-system/sw/bin/termite"
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
 --
-myWorkspaces = ["one","two","three","four","five"] ++ map show [6..9]
+myWorkspaces = ["one","two","three","four","five","six","seven","eight","nine"] -- ++ map show [6..9]
  
 
 ------------------------------------------------------------------------
@@ -102,7 +102,7 @@ xmobarTitleColor = "green"
 xmobarCurrentWorkspaceColor = "#CEFFAC"
 
 -- Width of the window border in pixels.
-myBorderWidth = 5
+myBorderWidth = 7
 
 
 
