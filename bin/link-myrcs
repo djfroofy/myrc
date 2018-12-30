@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+DIR="$(dirname $(cd "$( dirname "${BASH_SOURCE}" )" >/dev/null 2>&1 && pwd ))"
+
+cd $DIR
+
+for f in $(find . -type f -print | egrep -v '^\./\.git/.*')
+do
+    local_dir=$(dirname $f | sed -e 's/^\.\///g')
+    mkdir -vp ~/$local_dir
+    local_path=$(echo $f | sed -e 's/^\.\///g')
+    ln -sivf ${DIR}/$local_path ~/$local_path
+done
