@@ -22,7 +22,7 @@ import qualified Data.Map as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal = "/run/current-system/sw/bin/termite"
+myTerminal = "termite"
 
 ------------------------------------------------------------------------
 -- Workspaces
@@ -301,7 +301,7 @@ myLayouts = onWorkspace "three" simplestFloat $ defaultLayouts
 --main = xmonad =<< xmobar defaultConfig { terminal = "urxvt" }
 
 main = do  
- xmproc <- spawnPipe "/run/current-system/sw/bin/xmobar ~/.xmobarrc"
+ xmproc <- spawnPipe "xmobar ~/.xmobarrc"
  xmonad $ defaults  
       { manageHook = manageDocks <+> manageHook defaultConfig  
       , layoutHook = avoidStruts $ myLayouts
